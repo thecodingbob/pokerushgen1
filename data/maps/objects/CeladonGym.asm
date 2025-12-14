@@ -12,8 +12,10 @@ CeladonGym_Object:
 	db $3 ; border block
 
 	def_warp_events
-	warp_event  4, 17, LAST_MAP, 7
-	warp_event  5, 17, LAST_MAP, 7
+	warp_event  4, 17, ROCKET_HIDEOUT_B4F, 3
+	warp_event  5, 17, ROCKET_HIDEOUT_B4F, 3
+	warp_event  4, 0, POKEMON_TOWER_2F, 1
+	warp_event  5, 0, POKEMON_TOWER_2F, 1
 
 	def_bg_events
 
