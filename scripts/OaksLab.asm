@@ -505,6 +505,12 @@ OaksLabPlayerWatchRivalExitScript:
 	xor a ; ld a, SPRITE_FACING_DOWN
 	ld [wSpritePlayerStateData1FacingDirection], a
 .done
+	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	ResetEventReuseHL EVENT_2ND_ROUTE22_RIVAL_BATTLE
+	SetEventReuseHL EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ld a, HS_ROUTE_22_RIVAL_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 	ret
 
 OaksLabRivalArrivesAtOaksRequestScript:
