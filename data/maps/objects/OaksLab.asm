@@ -20,7 +20,7 @@ OaksLab_Object:
 	warp_event  0,  4, REDS_HOUSE_2F, 1
 	warp_event  0,  5, REDS_HOUSE_2F, 1
 	warp_event  4, 11, ROUTE_22, 2
-	warp_event  5, 11, ROUTE_22, 3
+	warp_event  5, 11, ROUTE_22, 2
 
 	def_bg_events
 
