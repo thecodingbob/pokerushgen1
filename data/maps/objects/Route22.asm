@@ -17,6 +17,6 @@ Route22_Object:
 
 	def_object_events
 	object_event 25,  5, SPRITE_BLUE, STAY, NONE, TEXT_ROUTE22_RIVAL1
-	object_event 12,  7, SPRITE_BLUE, STAY, NONE, TEXT_ROUTE22_RIVAL2
+	object_event  7,  6, SPRITE_BLUE, STAY, NONE, TEXT_ROUTE22_RIVAL2
 
 	def_warps_to ROUTE_22

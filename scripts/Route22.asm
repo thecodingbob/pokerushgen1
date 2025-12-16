@@ -58,7 +58,10 @@ Route22RivalMovementData:
 Route22DefaultScript:
 	CheckEvent EVENT_ROUTE22_RIVAL_WANTS_BATTLE
 	ret z
-	ld hl, .Route22RivalBattleCoords
+.firstRivalBattle
+	CheckEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	jp z, .secondRivalBattle
+	ld hl, .Route22Rival1BattleCoords
 	call ArePlayerCoordsInArray
 	ret nc
 	ld a, [wCoordIndex]
@@ -69,16 +72,33 @@ Route22DefaultScript:
 	ld [wJoyIgnore], a
 	ld a, PLAYER_DIR_LEFT
 	ld [wPlayerMovingDirection], a
-	CheckEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
-	jr nz, Route22FirstRivalBattleScript
+	jp Route22FirstRivalBattleScript
+	ret
+.secondRivalBattle
 	CheckEventReuseA EVENT_2ND_ROUTE22_RIVAL_BATTLE
-	jp nz, Route22SecondRivalBattleScript
+	ret z
+	ld hl, .Route22Rival2BattleCoords
+	call ArePlayerCoordsInArray
+	ret nc
+	ld a, [wCoordIndex]
+	ld [wSavedCoordIndex], a
+	xor a
+	ldh [hJoyHeld], a
+	ld a, PAD_CTRL_PAD
+	ld [wJoyIgnore], a
+	ld a, PLAYER_DIR_LEFT
+	ld [wPlayerMovingDirection], a
+	jp Route22SecondRivalBattleScript
 	ret
 
-.Route22RivalBattleCoords
+.Route22Rival1BattleCoords
 	dbmapcoord 29,  4
 	dbmapcoord 29,  5
 	db -1 ; end
+
+.Route22Rival2BattleCoords
+	dbmapcoord 8,  6 ; second battle is now in a different position
+	db -1
 
 Route22FirstRivalBattleScript:
 	ld a, ROUTE22_RIVAL1
@@ -108,7 +128,7 @@ Route22Rival1StartBattleScript:
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
 	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22Rival1BattleCoords
 	jr nz, .set_rival_facing_right
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerMovingDirection], a
@@ -173,7 +193,7 @@ Route22Rival1AfterBattleScript:
 	call PlaySound
 	farcall Music_RivalAlternateStart
 	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22Rival1BattleCoords
 	jr nz, .exit_movement_2
 	call .RivalExit1Script
 	jr .next_script
@@ -245,21 +265,15 @@ Route22SecondRivalBattleScript:
 	ld [wNewSoundID], a
 	call PlaySound
 	farcall Music_RivalAlternateTempo
-	ld a, ROUTE22_RIVAL2
-	ldh [hSpriteIndex], a
-	call Route22MoveRivalRightScript
 	ld a, SCRIPT_ROUTE22_RIVAL2_START_BATTLE
 	ld [wRoute22CurScript], a
 	ret
 
 Route22Rival2StartBattleScript:
-	ld a, [wStatusFlags5]
-	bit BIT_SCRIPTED_NPC_MOVEMENT, a
-	ret nz
 	ld a, ROUTE22_RIVAL2
 	ldh [hSpriteIndex], a
 	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22Rival1BattleCoords
 	jr nz, .set_player_direction_left
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerMovingDirection], a
@@ -303,7 +317,7 @@ Route22Rival2AfterBattleScript:
 	ld a, ROUTE22_RIVAL2
 	ldh [hSpriteIndex], a
 	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22Rival1BattleCoords
 	jr nz, .set_player_direction_left
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerMovingDirection], a
@@ -327,7 +341,7 @@ Route22Rival2AfterBattleScript:
 	call PlaySound
 	farcall Music_RivalAlternateStartAndTempo
 	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22Rival1BattleCoords
 	jr nz, .exit_movement_2
 	call .RivalExit1Script
 	jr .next_script
