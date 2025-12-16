@@ -17,8 +17,8 @@ ViridianGym_Object:
 	def_warp_events
 	warp_event 16, 17, CINNABAR_GYM, 3
 	warp_event 17, 17, CINNABAR_GYM, 4
-	warp_event  2,  0, ROUTE_22, 5
-	warp_event  3,  0, ROUTE_22, 5
+	warp_event  2,  0, ROUTE_22, 4
+	warp_event  3,  0, ROUTE_22, 4
 
 	def_bg_events
 
