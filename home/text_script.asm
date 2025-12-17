@@ -83,6 +83,8 @@ ENDM
 	dict2 TX_SCRIPT_VENDING_MACHINE,         farcall VendingMachineMenu
 	dict  TX_SCRIPT_PRIZE_VENDOR,            TextScript_GameCornerPrizeMenu
 	dict2 TX_SCRIPT_CABLE_CLUB_RECEPTIONIST, callfar CableClubNPC
+	; Pokérush additions
+	dict2  TX_SCRIPT_HEAL_GUY, 				 callfar DisplayHealGuyDialogue
 
 	call PrintText_NoCreatingTextBox
 	ld a, [wDoNotWaitForButtonPressAfterDisplayingText]

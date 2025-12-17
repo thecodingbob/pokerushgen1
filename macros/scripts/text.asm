@@ -235,3 +235,10 @@ ENDM
 MACRO script_vending_machine
 	db TX_SCRIPT_VENDING_MACHINE
 ENDM
+
+; Pokérush section
+
+	const TX_SCRIPT_HEAL_GUY ; $f4
+MACRO script_heal_guy
+	db TX_SCRIPT_HEAL_GUY
+ENDM

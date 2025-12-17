@@ -178,48 +178,4 @@ PewterGymCooltrainerMAfterBattleText:
 	text_end
 
 PewterGymGuideText:
-	text_asm
-	ld a, [wBeatGymFlags]
-	bit BIT_BOULDERBADGE, a
-	jr nz, .afterBeat
-	ld hl, PewterGymGuidePreAdviceText
-	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .PewterGymGuideBeginAdviceText
-	ld hl, PewterGymGuideBeginAdviceText
-	call PrintText
-	jr .PewterGymGuideAdviceText
-.PewterGymGuideBeginAdviceText
-	ld hl, PewterGymGuideFreeServiceText
-	call PrintText
-.PewterGymGuideAdviceText
-	ld hl, PewterGymGuideAdviceText
-	call PrintText
-	jr .done
-.afterBeat
-	ld hl, PewterGymGuidePostBattleText
-	call PrintText
-.done
-	jp TextScriptEnd
-
-PewterGymGuidePreAdviceText:
-	text_far _PewterGymGuidePreAdviceText
-	text_end
-
-PewterGymGuideBeginAdviceText:
-	text_far _PewterGymGuideBeginAdviceText
-	text_end
-
-PewterGymGuideAdviceText:
-	text_far _PewterGymGuideAdviceText
-	text_end
-
-PewterGymGuideFreeServiceText:
-	text_far _PewterGymGuideFreeServiceText
-	text_end
-
-PewterGymGuidePostBattleText:
-	text_far _PewterGymGuidePostBattleText
-	text_end
+	script_heal_guy
