@@ -273,19 +273,5 @@ FuchsiaGymRocker6AfterBattleText:
 	text_end
 
 FuchsiaGymGymGuideText:
-	text_asm
-	CheckEvent EVENT_BEAT_KOGA
-	ld hl, .BeatKogaText
-	jr nz, .afterBeat
-	ld hl, .ChampInMakingText
-.afterBeat
-	call PrintText
-	jp TextScriptEnd
+	script_heal_guy
 
-.ChampInMakingText:
-	text_far _FuchsiaGymGymGuideChampInMakingText
-	text_end
-
-.BeatKogaText:
-	text_far _FuchsiaGymGymGuideBeatKogaText
-	text_end
