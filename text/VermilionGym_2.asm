@@ -113,33 +113,3 @@ _VermilionGymSailorAfterBattleText::
 	cont "next to it!"
 	done
 
-_VermilionGymGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "LT.SURGE has a"
-	line "nickname. People"
-	cont "refer to him as"
-	cont "the Lightning"
-	cont "American!"
-
-	para "He's an expert on"
-	line "electric #MON!"
-
-	para "Birds and water"
-	line "#MON are at"
-	cont "risk! Beware of"
-	cont "paralysis too!"
-
-	para "LT.SURGE is very"
-	line "cautious!"
-
-	para "You'll have to"
-	line "break a code to"
-	cont "get to him!"
-	done
-
-_VermilionGymGymGuideBeatLTSurgeText::
-	text "Whew! That match"
-	line "was electric!"
-	done
