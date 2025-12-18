@@ -188,22 +188,4 @@ CeruleanGymAfterBattleText2:
 	text_end
 
 CeruleanGymGymGuideText:
-	text_asm
-	CheckEvent EVENT_BEAT_MISTY
-	jr nz, .afterBeat
-	ld hl, .ChampInMakingText
-	call PrintText
-	jr .done
-.afterBeat
-	ld hl, .BeatMistyText
-	call PrintText
-.done
-	jp TextScriptEnd
-
-.ChampInMakingText:
-	text_far _CeruleanGymGymGuideChampInMakingText
-	text_end
-
-.BeatMistyText:
-	text_far _CeruleanGymGymGuideBeatMistyText
-	text_end
+	script_heal_guy

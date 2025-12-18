@@ -104,30 +104,3 @@ _CeruleanGymAfterBattleText2::
 	para "She won't lose to"
 	line "someone like you!"
 	done
-
-_CeruleanGymGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "Here's my advice!"
-
-	para "The LEADER, MISTY,"
-	line "is a pro who uses"
-	cont "water #MON!"
-
-	para "You can drain all"
-	line "their water with"
-	cont "plant #MON!"
-
-	para "Or, zap them with"
-	line "electricity!"
-	done
-
-_CeruleanGymGymGuideBeatMistyText::
-	text "You beat MISTY!"
-	line "What'd I tell ya?"
-
-	para "You and me kid,"
-	line "we make a pretty"
-	cont "darn good team!"
-	done
