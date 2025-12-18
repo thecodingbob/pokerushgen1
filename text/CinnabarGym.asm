@@ -191,22 +191,6 @@ _CinnabarGymSuperNerd7AfterBattleText::
 	cont "ice #MON!"
 	done
 
-_CinnabarGymGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "The hot-headed"
-	line "BLAINE is a fire"
-	cont "#MON pro!"
-
-	para "Douse his spirits"
-	line "with water!"
-
-	para "You better take"
-	line "some BURN HEALs!"
-	done
-
-_CinnabarGymGymGuideBeatBlaineText::
 	text "<PLAYER>! You beat"
 	line "that fire brand!"
 	done

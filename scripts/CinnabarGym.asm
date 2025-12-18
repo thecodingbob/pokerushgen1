@@ -456,21 +456,4 @@ CinnabarGymSuperNerd7:
 	text_end
 
 CinnabarGymGymGuideText:
-	text_asm
-	CheckEvent EVENT_BEAT_BLAINE
-	jr nz, .afterBeat
-	ld hl, .ChampInMakingText
-	jr .done
-.afterBeat
-	ld hl, .BeatBlaineText
-.done
-	call PrintText
-	jp TextScriptEnd
-
-.ChampInMakingText:
-	text_far _CinnabarGymGymGuideChampInMakingText
-	text_end
-
-.BeatBlaineText:
-	text_far _CinnabarGymGymGuideBeatBlaineText
-	text_end
+	script_heal_guy
