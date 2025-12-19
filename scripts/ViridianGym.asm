@@ -421,22 +421,4 @@ ViridianGymCooltrainerM3AfterBattleText:
 	text_end
 
 ViridianGymGymGuideText:
-	text_asm
-	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
-	jr nz, .afterBeat
-	ld hl, ViridianGymGuidePreBattleText
-	call PrintText
-	jr .done
-.afterBeat
-	ld hl, ViridianGymGuidePostBattleText
-	call PrintText
-.done
-	jp TextScriptEnd
-
-ViridianGymGuidePreBattleText:
-	text_far _ViridianGymGuidePreBattleText
-	text_end
-
-ViridianGymGuidePostBattleText:
-	text_far _ViridianGymGuidePostBattleText
-	text_end
+	script_heal_guy

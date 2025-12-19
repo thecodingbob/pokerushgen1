@@ -214,27 +214,3 @@ _ViridianGymCooltrainerM3AfterBattleText::
 	cont "only by defeating"
 	cont "our GYM LEADER!"
 	done
-
-_ViridianGymGuidePreBattleText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "Even I don't know"
-	line "VIRIDIAN LEADER's"
-	cont "identity!"
-
-	para "This will be the"
-	line "toughest of all"
-	cont "the GYM LEADERs!"
-
-	para "I heard that the"
-	line "trainers here"
-	cont "like ground-type"
-	cont "#MON!"
-	done
-
-_ViridianGymGuidePostBattleText::
-	text "Blow me away!"
-	line "GIOVANNI was the"
-	cont "GYM LEADER here?"
-	done
