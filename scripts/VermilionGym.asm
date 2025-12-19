@@ -229,23 +229,4 @@ VermilionGymSailorAfterBattleText:
 	text_end
 
 VermilionGymGymGuideText:
-	text_asm
-	ld a, [wBeatGymFlags]
-	bit BIT_THUNDERBADGE, a
-	jr nz, .got_thunderbadge
-	ld hl, .ChampInMakingText
-	call PrintText
-	jr .text_script_end
-.got_thunderbadge
-	ld hl, .BeatLTSurgeText
-	call PrintText
-.text_script_end
-	jp TextScriptEnd
-
-.ChampInMakingText:
-	text_far _VermilionGymGymGuideChampInMakingText
-	text_end
-
-.BeatLTSurgeText:
-	text_far _VermilionGymGymGuideBeatLTSurgeText
-	text_end
+	script_heal_guy
