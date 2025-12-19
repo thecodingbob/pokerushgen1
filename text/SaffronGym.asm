@@ -74,32 +74,6 @@ _SaffronGymSabrinaTM46NoRoomText::
 	line "of other items!"
 	done
 
-_SaffronGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "SABRINA's #MON"
-	line "use psychic power"
-	cont "instead of force!"
-
-	para "Fighting #MON"
-	line "are weak against"
-	cont "psychic #MON!"
-
-	para "They get creamed"
-	line "before they can"
-	cont "even aim a punch!"
-	done
-
-_SaffronGymGuideBeatSabrinaText::
-	text "Psychic power,"
-	line "huh?"
-
-	para "If I had that,"
-	line "I'd make a bundle"
-	cont "at the slots!"
-	done
-
 _SaffronGymChanneler1BattleText::
 	text "SABRINA is younger"
 	line "than I, but I"

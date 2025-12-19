@@ -169,26 +169,3 @@ _FuchsiaGymRocker6AfterBattleText::
 	line "Which do you"
 	cont "choose?"
 	done
-
-_FuchsiaGymGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "FUCHSIA GYM is"
-	line "riddled with"
-	cont "invisible walls!"
-
-	para "KOGA might appear"
-	line "close, but he's"
-	cont "blocked off!"
-
-	para "You have to find"
-	line "gaps in the walls"
-	cont "to reach him!"
-	done
-
-_FuchsiaGymGymGuideBeatKogaText::
-	text "It's amazing how"
-	line "ninja can terrify"
-	cont "even now!"
-	done

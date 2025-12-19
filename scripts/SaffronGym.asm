@@ -208,25 +208,7 @@ SaffronGymYoungster4Text:
 	jp TextScriptEnd
 
 SaffronGymGymGuideText:
-	text_asm
-	CheckEvent EVENT_BEAT_SABRINA
-	jr nz, .afterBeat
-	ld hl, .ChampInMakingText
-	call PrintText
-	jr .done
-.afterBeat
-	ld hl, .BeatSabrinaText
-	call PrintText
-.done
-	jp TextScriptEnd
-
-.ChampInMakingText:
-	text_far _SaffronGymGuideChampInMakingText
-	text_end
-
-.BeatSabrinaText:
-	text_far _SaffronGymGuideBeatSabrinaText
-	text_end
+	script_heal_guy
 
 SaffronGymChanneler1BattleText:
 	text_far _SaffronGymChanneler1BattleText
