@@ -77,6 +77,8 @@ CeruleanGym_TextPointers:
 	dw_const CeruleanGymCooltrainerFText,          TEXT_CERULEANGYM_COOLTRAINER_F
 	dw_const CeruleanGymSwimmerText,               TEXT_CERULEANGYM_SWIMMER
 	dw_const CeruleanGymGymGuideText,              TEXT_CERULEANGYM_GYM_GUIDE
+	dw_const BaseShopText,          		       TEXT_CERULEANGYM_BASE_SHOP
+	dw_const VitaminShopText,				       TEXT_CERULEANGYM_VITAMIN_SHOP
 	dw_const CeruleanGymMistyCascadeBadgeInfoText, TEXT_CERULEANGYM_MISTY_CASCADE_BADGE_INFO
 	dw_const CeruleanGymMistyReceivedTM11Text,     TEXT_CERULEANGYM_MISTY_RECEIVED_TM11
 	dw_const CeruleanGymMistyTM11NoRoomText,       TEXT_CERULEANGYM_MISTY_TM11_NO_ROOM
