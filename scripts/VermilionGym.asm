@@ -98,6 +98,8 @@ VermilionGym_TextPointers:
 	dw_const VermilionGymSuperNerdText,               TEXT_VERMILIONGYM_SUPER_NERD
 	dw_const VermilionGymSailorText,                  TEXT_VERMILIONGYM_SAILOR
 	dw_const VermilionGymGymGuideText,                TEXT_VERMILIONGYM_GYM_GUIDE
+	dw_const BaseShop2Text,          		 		  TEXT_VERMILIONGYM_BASE_SHOP
+	dw_const VitaminShopText,				 	      TEXT_VERMILIONGYM_VITAMIN_SHOP
 	dw_const VermilionGymLTSurgeThunderBadgeInfoText, TEXT_VERMILIONGYM_LT_SURGE_THUNDER_BADGE_INFO
 	dw_const VermilionGymLTSurgeReceivedTM24Text,     TEXT_VERMILIONGYM_LT_SURGE_RECEIVED_TM24
 	dw_const VermilionGymLTSurgeTM24NoRoomText,       TEXT_VERMILIONGYM_LT_SURGE_TM24_NO_ROOM

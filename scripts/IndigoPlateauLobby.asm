@@ -19,8 +19,8 @@ IndigoPlateauLobby_TextPointers:
 	dw_const IndigoPlateauLobbyNurseText,            TEXT_INDIGOPLATEAULOBBY_NURSE
 	dw_const IndigoPlateauLobbyGymGuideText,         TEXT_INDIGOPLATEAULOBBY_GYM_GUIDE
 	dw_const IndigoPlateauLobbyCooltrainerFText,     TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F
-	dw_const IndigoPlateauLobbyClerkText,            TEXT_INDIGOPLATEAULOBBY_CLERK
-	dw_const IndigoPlateauLobbyLinkReceptionistText, TEXT_INDIGOPLATEAULOBBY_LINK_RECEPTIONIST
+	dw_const IndigoPlateauLobbyClerkText,            TEXT_INDIGOPLATEAULOBBY_BASE_SHOP
+	dw_const VitaminShopText,						 TEXT_INDIGOPLATEAULOBBY_VITAMIN_SHOP
 
 IndigoPlateauLobbyNurseText:
 	script_pokecenter_nurse
@@ -33,5 +33,3 @@ IndigoPlateauLobbyCooltrainerFText:
 	text_far _IndigoPlateauLobbyCooltrainerFText
 	text_end
 
-IndigoPlateauLobbyLinkReceptionistText:
-	script_cable_club_receptionist

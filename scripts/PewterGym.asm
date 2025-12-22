@@ -85,6 +85,8 @@ PewterGym_TextPointers:
 	dw_const PewterGymBrockText,             TEXT_PEWTERGYM_BROCK
 	dw_const PewterGymCooltrainerMText,      TEXT_PEWTERGYM_COOLTRAINER_M
 	dw_const PewterGymGuideText,             TEXT_PEWTERGYM_GYM_GUIDE
+	dw_const BaseShopText,          		 TEXT_PEWTERGYM_BASE_SHOP
+	dw_const VitaminShopText,				 TEXT_PEWTERGYM_VITAMIN_SHOP
 	dw_const PewterGymBrockWaitTakeThisText, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
 	dw_const PewterGymReceivedTM34Text,      TEXT_PEWTERGYM_RECEIVED_TM34
 	dw_const PewterGymTM34NoRoomText,        TEXT_PEWTERGYM_TM34_NO_ROOM

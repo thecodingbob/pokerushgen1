@@ -184,6 +184,8 @@ CinnabarGym_TextPointers:
 	dw_const CinnabarGymSuperNerd6,                 TEXT_CINNABARGYM_SUPER_NERD6
 	dw_const CinnabarGymSuperNerd7,                 TEXT_CINNABARGYM_SUPER_NERD7
 	dw_const CinnabarGymGymGuideText,               TEXT_CINNABARGYM_GYM_GUIDE
+	dw_const BaseShop4Text,          		 		TEXT_CINNABARGYM_BASE_SHOP
+	dw_const VitaminShopText,				 		TEXT_CINNABARGYM_VITAMIN_SHOP
 	dw_const CinnabarGymBlaineVolcanoBadgeInfoText, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
 	dw_const CinnabarGymBlaineReceivedTM38Text,     TEXT_CINNABARGYM_BLAINE_RECEIVED_TM38
 	dw_const CinnabarGymBlaineTM38NoRoomText,       TEXT_CINNABARGYM_BLAINE_TM38_NO_ROOM

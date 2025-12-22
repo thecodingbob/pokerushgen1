@@ -82,6 +82,8 @@ SaffronGym_TextPointers:
 	dw_const SaffronGymYoungster3Text,            TEXT_SAFFRONGYM_YOUNGSTER3
 	dw_const SaffronGymYoungster4Text,            TEXT_SAFFRONGYM_YOUNGSTER4
 	dw_const SaffronGymGymGuideText,              TEXT_SAFFRONGYM_GYM_GUIDE
+	dw_const BaseShop3Text,          		      TEXT_SAFFRONGYM_BASE_SHOP
+	dw_const VitaminShopText,				 	  TEXT_SAFFRONGYM_VITAMIN_SHOP
 	dw_const SaffronGymSabrinaMarshBadgeInfoText, TEXT_SAFFRONGYM_SABRINA_MARSH_BADGE_INFO
 	dw_const SaffronGymSabrinaReceivedTM46Text,   TEXT_SAFFRONGYM_SABRINA_RECEIVED_TM46
 	dw_const SaffronGymSabrinaTM46NoRoomText,     TEXT_SAFFRONGYM_SABRINA_TM46_NO_ROOM

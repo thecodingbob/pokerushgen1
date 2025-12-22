@@ -82,6 +82,8 @@ CeladonGym_TextPointers:
 	dw_const CeladonGymBeauty3Text,          TEXT_CELADONGYM_BEAUTY3
 	dw_const CeladonGymCooltrainerF4Text,    TEXT_CELADONGYM_COOLTRAINER_F4
 	dw_const CeladonGymGymGuideText,		 TEXT_CELADONGYM_GYM_GUIDE
+	dw_const BaseShop2Text,          		 TEXT_CELADONGYM_BASE_SHOP
+	dw_const VitaminShopText,				 TEXT_CELADONGYM_VITAMIN_SHOP
 	dw_const CeladonGymRainbowBadgeInfoText, TEXT_CELADONGYM_RAINBOWBADGE_INFO
 	dw_const CeladonGymReceivedTM21Text,     TEXT_CELADONGYM_RECEIVED_TM21
 	dw_const CeladonGymTM21NoRoomText,       TEXT_CELADONGYM_TM21_NO_ROOM
