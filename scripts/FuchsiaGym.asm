@@ -83,6 +83,8 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymRocker5Text,           TEXT_FUCHSIAGYM_ROCKER5
 	dw_const FuchsiaGymRocker6Text,           TEXT_FUCHSIAGYM_ROCKER6
 	dw_const FuchsiaGymGymGuideText,          TEXT_FUCHSIAGYM_GYM_GUIDE
+	dw_const BaseShop3Text,          		  TEXT_FUCHSIAGYM_BASE_SHOP
+	dw_const VitaminShopText,				  TEXT_FUCHSIAGYM_VITAMIN_SHOP
 	dw_const FuchsiaGymKogaSoulBadgeInfoText, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	dw_const FuchsiaGymKogaReceivedTM06Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM06
 	dw_const FuchsiaGymKogaTM06NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM06_NO_ROOM
