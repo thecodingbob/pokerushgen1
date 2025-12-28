@@ -73,10 +73,10 @@ HandlePokedexSideMenu:
 	push af
 	ld a, [wDexMaxSeenMon]
 	push af ; this doesn't need to be preserved
-	ld hl, wPokedexSeen
-	call IsPokemonBitSet
-	ld b, 2
-	jr z, .exitSideMenu
+	;ld hl, wPokedexSeen
+	;call IsPokemonBitSet
+	;ld b, 2
+	;jr z, .exitSideMenu
 	call PokedexToIndex
 	ld hl, wTopMenuItemY
 	ld a, 10
@@ -104,7 +104,7 @@ HandlePokedexSideMenu:
 	dec a
 	jr z, .choseCry
 	dec a
-	jr z, .choseArea
+	jr z, .choseBuy
 .choseQuit
 	ld b, 1
 .exitSideMenu
@@ -147,8 +147,23 @@ HandlePokedexSideMenu:
 	call PlaySound
 	jr .handleMenuInput
 
-.choseArea
-	predef LoadTownMap_Nest ; display pokemon areas
+.choseBuy
+	call GetMonName
+	ld hl, WantToBuyPokemonText
+	call PrintText
+	ld a, MONEY_BOX
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jp nz, .choseNo
+.choseYes
+	ld a, [wPokedexNum]
+	ld b, a
+	ld c, 5
+	call GivePokemon
+.choseNo
 	ld b, 0
 	jr .exitSideMenu
 
@@ -198,8 +213,8 @@ HandlePokedexListMenu:
 	ld de, PokedexMenuItemsText
 	call PlaceString
 ; find the highest pokedex number among the pokemon the player has seen
-	ld hl, wPokedexSeenEnd - 1
-	ld b, (wPokedexSeenEnd - wPokedexSeen) * 8 + 1
+	;ld hl, wPokedexSeenEnd - 1
+	ld b, 152
 .maxSeenPokemonLoop
 	ld a, [hld]
 	ld c, 8
@@ -257,13 +272,13 @@ HandlePokedexListMenu:
 .writeTile
 	ld [hl], a ; put a pokeball next to pokemon that the player has owned
 	push hl
-	ld hl, wPokedexSeen
-	call IsPokemonBitSet
-	jr nz, .getPokemonName ; if the player has seen the pokemon
-	ld de, .dashedLine ; print a dashed line in place of the name if the player hasn't seen the pokemon
-	jr .skipGettingName
+	;ld hl, wPokedexSeen
+	;call IsPokemonBitSet
+	;jr nz, .getPokemonName ; if the player has seen the pokemon
+	;ld de, .dashedLine ; print a dashed line in place of the name if the player hasn't seen the pokemon
+	;jr .skipGettingName
 .dashedLine ; for unseen pokemon in the list
-	db "----------@"
+	;db "----------@"
 .getPokemonName
 	call PokedexToIndex
 	call GetMonName
@@ -371,7 +386,7 @@ PokedexContentsText:
 PokedexMenuItemsText:
 	db   "DATA"
 	next "CRY"
-	next "AREA"
+	next "BUY"
 	next "QUIT@"
 
 ; tests if a pokemon's bit is set in the seen or owned pokemon bit fields
@@ -659,5 +674,9 @@ IndexToPokedex:
 	pop hl
 	pop bc
 	ret
+
+WantToBuyPokemonText:
+	text_far _WantToBuyPokemonText
+	text_end
 
 INCLUDE "data/pokemon/dex_order.asm"

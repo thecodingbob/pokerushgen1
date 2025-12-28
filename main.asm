@@ -359,3 +359,4 @@ INCLUDE "engine/items/tm_prices.asm"
 SECTION "Pokérush extra", ROMX
 
 INCLUDE "engine/events/heal_guy.asm"
+INCLUDE "data/pokemon/pokerush/prices.asm"
