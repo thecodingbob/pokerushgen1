@@ -281,3 +281,4 @@ INCLUDE "data/moves/names.asm"
 SECTION "Pokérush text", ROMX
 
 INCLUDE "text/pokerush/HealGuy.asm"
+INCLUDE "text/pokerush/BuyPokemon.asm"
