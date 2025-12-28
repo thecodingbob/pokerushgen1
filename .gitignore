@@ -30,3 +30,6 @@
 *.sa*
 *.sg1
 *.ss*
+
+# ide files
+.vscode
